@@ -141,22 +141,22 @@ $(document).ready(function () {
     });
     $("#timeBlock4 .saveBtn").click(function () { 
         let text4 = $("#timeBlock4 .col-10").val();
-        console.log(text4);
+        // console.log(text4);
         localStorage.setItem("text4", text4);
     });
     $("#timeBlock5 .saveBtn").click(function () { 
         let text5 = $("#timeBlock5 .col-10").val();
-        console.log(text5);
+        // console.log(text5);
         localStorage.setItem("text5", text5);
     });
     $("#timeBlock6 .saveBtn").click(function () { 
         let text6 = $("#timeBlock6 .col-10").val();
-        console.log(text6);
+        // console.log(text6);
         localStorage.setItem("text6", text6);
     });
     $("#timeBlock7 .saveBtn").click(function () { 
         let text7 = $("#timeBlock7 .col-10").val();
-        console.log(text7);
+        // console.log(text7);
         localStorage.setItem("text7", text7);
     });
 
