@@ -130,7 +130,7 @@ $(document).ready(function () {
         localStorage.setItem("text1", text1);
     });
     $("#timeBlock2 .saveBtn").click(function () { 
-        let tex2t = $("#timeBlock2 .col-10").val();
+        let text2 = $("#timeBlock2 .col-10").val();
         // console.log(text2);
         localStorage.setItem("text2", text2);
     });
