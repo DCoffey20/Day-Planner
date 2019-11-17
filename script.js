@@ -9,9 +9,9 @@ $(document).ready(function () {
     //bringing current day in to page
     let headerDay = moment().format("dddd, MMMM Do");
     $("#currentDay").text(headerDay);
-    let test = moment().format("H");
-    test = parseInt(test);
-    // console.log(test);
+    let time = moment().format("H");
+    time = parseInt(time);
+    // console.log(time);
 
     //setting the correct time for each hour
     $("#timeBlock7 .time-block").text("10 AM");
@@ -40,77 +40,135 @@ $(document).ready(function () {
 
     // comparing current time vs the hour blocks and added class to change color of text area
    
-    if( test > $("#timeBlock").val()){
+    if( time > $("#timeBlock").val()){
         $("#timeBlock .col-10").addClass("past");
-    } else if ( test === $("#timeBlock").val()){
+    } else if ( time === $("#timeBlock").val()){
         $("#timeBlock .col-10").addClass("present");
-    } else if ( test < $("#timeBlock").val()){
+    } else if ( time < $("#timeBlock").val()){
         $("#timeBlock .col-10").addClass("future");
     };
 
-    if( test > $("#timeBlock0").val()){
+    if( time > $("#timeBlock0").val()){
         $("#timeBlock0 .col-10").addClass("past");
-    } else if ( test == $("#timeBlock0").val()){
+    } else if ( time == $("#timeBlock0").val()){
         $("#timeBlock0 .col-10").addClass("present");
-    } else if ( test < $("#timeBlock0").val()){
+    } else if ( time < $("#timeBlock0").val()){
         $("#timeBlock0 .col-10").addClass("future");
     };
 
-    if( test > $("#timeBlock1").val()){
+    if( time > $("#timeBlock1").val()){
         $("#timeBlock1 .col-10").addClass("past");
-    } else if ( test == $("#timeBlock1").val()){
+    } else if ( time == $("#timeBlock1").val()){
         $("#timeBlock1 .col-10").addClass("present");
-    } else if ( test < $("#timeBlock0").val()){
+    } else if ( time < $("#timeBlock0").val()){
         $("#timeBlock0 .col-10").addClass("future");
     };
 
-    if( test > $("#timeBlock2").val()){
+    if( time > $("#timeBlock2").val()){
         $("#timeBlock2 .col-10").addClass("past");
-    } else if ( test == $("#timeBlock2").val()){
+    } else if ( time == $("#timeBlock2").val()){
         $("#timeBlock2 .col-10").addClass("present");
-    } else if ( test < $("#timeBlock2").val()){
+    } else if ( time < $("#timeBlock2").val()){
         $("#timeBlock2 .col-10").addClass("future");
     };
 
-    if( test > $("#timeBlock3").val()){
+    if( time > $("#timeBlock3").val()){
         $("#timeBlock3 .col-10").addClass("past");
-    } else if ( test == $("#timeBlock3").val()){
+    } else if ( time == $("#timeBlock3").val()){
         $("#timeBlock3 .col-10").addClass("present");
-    } else if ( test < $("#timeBlock3").val()){
+    } else if ( time < $("#timeBlock3").val()){
         $("#timeBlock3 .col-10").addClass("future");
     };
 
-    if( test > $("#timeBlock4").val()){
+    if( time > $("#timeBlock4").val()){
         $("#timeBlock4 .col-10").addClass("past");
-    } else if ( test == $("#timeBlock4").val()){
+    } else if ( time == $("#timeBlock4").val()){
         $("#timeBlock4 .col-10").addClass("present");
-    } else if ( test < $("#timeBlock4").val()){
+    } else if ( time < $("#timeBlock4").val()){
         $("#timeBlock4 .col-10").addClass("future");
     };
 
-    if( test > $("#timeBlock5").val()){
+    if( time > $("#timeBlock5").val()){
         $("#timeBlock5 .col-10").addClass("past");
-    } else if ( test == $("#timeBlock5").val()){
+    } else if ( time == $("#timeBlock5").val()){
         $("#timeBlock5 .col-10").addClass("present");
-    } else if ( test < $("#timeBlock5").val()){
+    } else if ( time < $("#timeBlock5").val()){
         $("#timeBlock5 .col-10").addClass("future");
     };
 
-    if( test > $("#timeBlock6").val()){
+    if( time > $("#timeBlock6").val()){
         $("#timeBlock6 .col-10").addClass("past");
-    } else if ( test == $("#timeBlock6").val()){
+    } else if ( time == $("#timeBlock6").val()){
         $("#timeBlock6 .col-10").addClass("present");
-    } else if ( test < $("#timeBlock6").val()){
+    } else if ( time < $("#timeBlock6").val()){
         $("#timeBlock6 .col-10").addClass("future");
     };
 
-    if( test > $("#timeBlock7").val()){
+    if( time > $("#timeBlock7").val()){
         $("#timeBlock7 .col-10").addClass("past");
-    } else if ( test == $("#timeBlock7").val()){
+    } else if ( time == $("#timeBlock7").val()){
         $("#timeBlock7 .col-10").addClass("present");
-    } else if ( test < $("#timeBlock7").val()){
+    } else if ( time < $("#timeBlock7").val()){
         $("#timeBlock7 .col-10").addClass("future");
     };
-    // console.log( test < $("#timeBlock").val());
+    // console.log( time < $("#timeBlock").val());
 
+    // save text in textarea locally on click of save button
+    $("#timeBlock .saveBtn").click(function () { 
+        let text = $("#timeBlock .col-10").val();
+        // console.log(text);
+        localStorage.setItem("text", text);
+    });
+    $("#timeBlock0 .saveBtn").click(function () { 
+        let text0 = $("#timeBlock0 .col-10").val();
+        // console.log(text0);
+        localStorage.setItem("text0", text0);
+    });
+    $("#timeBlock1 .saveBtn").click(function () { 
+        let text1 = $("#timeBlock1 .col-10").val();
+        // console.log(text1);
+        localStorage.setItem("text1", text1);
+    });
+    $("#timeBlock2 .saveBtn").click(function () { 
+        let tex2t = $("#timeBlock2 .col-10").val();
+        // console.log(text2);
+        localStorage.setItem("text2", text2);
+    });
+    $("#timeBlock3 .saveBtn").click(function () { 
+        let text3 = $("#timeBlock3 .col-10").val();
+        // console.log(text3);
+        localStorage.setItem("text3", text3);
+    });
+    $("#timeBlock4 .saveBtn").click(function () { 
+        let text4 = $("#timeBlock4 .col-10").val();
+        console.log(text4);
+        localStorage.setItem("text4", text4);
+    });
+    $("#timeBlock5 .saveBtn").click(function () { 
+        let text5 = $("#timeBlock5 .col-10").val();
+        console.log(text5);
+        localStorage.setItem("text5", text5);
+    });
+    $("#timeBlock6 .saveBtn").click(function () { 
+        let text6 = $("#timeBlock6 .col-10").val();
+        console.log(text6);
+        localStorage.setItem("text6", text6);
+    });
+    $("#timeBlock7 .saveBtn").click(function () { 
+        let text7 = $("#timeBlock7 .col-10").val();
+        console.log(text7);
+        localStorage.setItem("text7", text7);
+    });
+
+// get text stored locally to apprear at page load
+    $("#timeBlock .col-10").val(localStorage.getItem("text"));
+    // localStorage.getItem("text");
+    $("#timeBlock0 .col-10").val(localStorage.getItem("text0"));
+    $("#timeBlock1 .col-10").val(localStorage.getItem("text1"));
+    $("#timeBlock2 .col-10").val(localStorage.getItem("text2"));
+    $("#timeBlock3 .col-10").val(localStorage.getItem("text3"));
+    $("#timeBlock4 .col-10").val(localStorage.getItem("text4"));
+    $("#timeBlock5 .col-10").val(localStorage.getItem("text5"));
+    $("#timeBlock6 .col-10").val(localStorage.getItem("text6"));
+    $("#timeBlock7 .col-10").val(localStorage.getItem("text7"));
 });
