@@ -8,6 +8,6 @@ Fill out what you have to do in each hour of the work day. Click the save button
 
 # Screenshots
 
-![Day Planner](./assets/ScreenShot.PNG "Auto Updating Current Hour")
+![Day Planner](./assets/Screenshot.PNG "Auto Updating Current Hour")
 
-![Day Planner](./assets/ScreenShot1.PNG "Auto Updating Current Day")
+![Day Planner](./assets/Screenshot1.PNG "Auto Updating Current Day")
