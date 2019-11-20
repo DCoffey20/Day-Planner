@@ -60,8 +60,8 @@ $(document).ready(function () {
         $("#timeBlock1 .col-10").addClass("past");
     } else if ( time == $("#timeBlock1").val()){
         $("#timeBlock1 .col-10").addClass("present");
-    } else if ( time < $("#timeBlock0").val()){
-        $("#timeBlock0 .col-10").addClass("future");
+    } else if ( time < $("#timeBlock1").val()){
+        $("#timeBlock1 .col-10").addClass("future");
     };
 
     if( time > $("#timeBlock2").val()){
